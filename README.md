@@ -101,13 +101,13 @@ The **Get Text** activity of UiPath.Core.Activities has the following properties
 
 **Continue On Error** of type **InArgument of Type Boolean**
 
-**Display Name** of type **String**
+**Display Name** of type **String** - useless in the context of the framework.
 
 **Target** of type **Target**
 
 **Target** has the following properties:
 
-- **Clipping Region** of type **Region**
+- **Clipping Region** of type **Region** - useless in the context of the framework.
   
 - **Element** of type **InArgument of Type UiElement**
   
@@ -118,7 +118,7 @@ The **Get Text** activity of UiPath.Core.Activities has the following properties
 - **WaitForReady** of type **InArgument of Type WaitForReady**
   
 
-**Private** of type **Boolean**
+**Private** of type **Boolean** - useless in the context of the framework.
 
 **Value** of type **OutArgument**
 
