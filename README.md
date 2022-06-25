@@ -7,10 +7,10 @@ A port of the UiPath.Core.Activities activities into C# code, this library will 
 This is an example of a GetValue implementation in C#:
 
 ```C#
-            var getValue = new Job_GetValue().Run
+var getValue = new Job_GetValue().Run
             (
-                WaitForReady.COMPLETE,
-                "<wnd app='notepad.exe' cls='Notepad' title='*Library.txt - Notepad' /><wnd aaname='Horizontal' cls='Edit' /><ctrl name='Text Editor' role='editable text' />"
+            WaitForReady.COMPLETE,
+            "<wnd app='notepad.exe' cls='Notepad' title='*Library.txt - Notepad' /><wnd aaname='Horizontal' cls='Edit' /><ctrl name='Text Editor' role='editable text'/>"
             );
 ```
 
