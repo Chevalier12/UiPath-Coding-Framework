@@ -97,7 +97,7 @@ Each one of the classes in UiPath.Core.Activities have properties that need to b
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("Press any key to continue or to exit...");
-                Console.ReadLine();
+                Console.ReadKey();
             }
 
             return output;
