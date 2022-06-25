@@ -145,4 +145,4 @@ To properly contribute to this project you have to create each of the activities
 
 # Is this breaking the UiPath ToS?
 
-This is something I am still in discussion with UiPath to find out, when I find out I will edit this section with my answer, regardless if it is legal or not, these library will be open source and usable by all who desire to use it.
+This is something I am still in discussion with UiPath to find out, when I find out I will edit this section with my answer, regardless if it is legal or not, these library will be open source and usable by all who desire to use it for their own personal (or business if it is ok to use) use.
