@@ -16,6 +16,8 @@ var getValue = new Job_GetValue().Run
 
 Simply create the object which has the prefix **Job_<your activity name>** with the **Run** method and voila, your activity will run immediately.
 
+A lot of classes created in this framework have already defined values for them, consider them "default" values, some of them are initialized and may be counterproductive for your workflow such as the WaitForReady value which in this framework is always set my default to NONE, always make sure your properties are properly controlled in order to have the best experience.
+
 # How to contribute
 
 Each one of the classes in UiPath.Core.Activities have properties that need to be initialized properly in an Activity class, see below for a snippet of the **Get Text** activity:
