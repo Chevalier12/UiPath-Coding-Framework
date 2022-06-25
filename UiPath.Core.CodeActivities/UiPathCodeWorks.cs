@@ -82,7 +82,7 @@ namespace Inscriber
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("Press any key to continue or to exit...");
-                Console.ReadLine();
+                Console.ReadKey();
             }
 
             return output;
@@ -177,12 +177,11 @@ namespace Inscriber
                         KeyModifiers = new InArgument<KeyModifiers>((activityContext)=> KeyModifiersArgument.Get(activityContext)),
                         SendWindowMessages = new InArgument<bool>((activityContext)=> SendWindowMessagesArgument.Get(activityContext)),
                         SimulateClick = new InArgument<bool>((activityContext)=> SimulateClickArgument.Get(activityContext))
-                        
-                        
+
+
                     }
                 }
             };
-
             
             try
             {
@@ -198,7 +197,7 @@ namespace Inscriber
                 Console.WriteLine("");
                 Console.WriteLine("");
                 Console.WriteLine("Press any key to continue or to exit...");
-                Console.ReadLine();
+                Console.ReadKey();
             }
 
             return output;
