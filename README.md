@@ -141,6 +141,7 @@ To properly contribute to this project you have to create each of the activities
 3. Managing the code with a team of programmers and maintaining it is much easier than in UiPath Studio.
 4. You can run as many workflows as your CPU can handle because there are no dependencies on UiRobot.exe or UiPath Assistant or any other UiPath software.
 5. You can create your robots in executables and deploy them on stations that do not have any UiPath software installed.
+6. You have access to the entirety of .NET capabilities (limited to .NET Framework 4.6 -> 4.8).
 
 # Is this breaking the UiPath ToS?
 
