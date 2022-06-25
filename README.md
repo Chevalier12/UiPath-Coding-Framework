@@ -2,6 +2,20 @@
 
 A port of the UiPath.Core.Activities activities into C# code, this library will allow you to run any activity in the UiPath.Core.Activities packages.
 
+# How to use?
+
+This is an example of a GetValue implementation in C#:
+
+```C#
+            var getValue = new Job_GetValue().Run
+            (
+                WaitForReady.COMPLETE,
+                "<wnd app='notepad.exe' cls='Notepad' title='*Library.txt - Notepad' /><wnd aaname='Horizontal' cls='Edit' /><ctrl name='Text Editor' role='editable text' />"
+            );
+```
+
+Simply create the object which has the prefix **Job_<your activity name>** with the **Run** method and voila, your activity will run immediately.
+
 # How to contribute
 
 Each one of the classes in UiPath.Core.Activities have properties that need to be initialized properly in an Activity class, see below for a snippet of the **Get Text** activity:
