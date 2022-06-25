@@ -124,7 +124,7 @@ The **Get Text** activity of UiPath.Core.Activities has the following properties
 
 A few of these properties you can see below in code:
 
-        ```
+        ```C#
         public InArgument<string> SelectorArgument { get; set; }
         public OutArgument<string> ValueArgument { get; set; }
         public InArgument<WaitForReady> WaitForReadyArgument { get; set; }
