@@ -33,55 +33,61 @@ Each one of the classes in UiPath.Core.Activities have properties that need to b
         public IDictionary<string, object> Run(
             WaitForReady waitForReady = WaitForReady.NONE,
             string Selector = null,
-            UiElement uiElement = null,
+            UiElement UiElement = null,
             int TimeOut = 30,
             bool ContinueOnError = false
         )
         {
+
+            //Assigning values and initializing dictionary
             WaitForReadyArgument = waitForReady;
             SelectorArgument = Selector;
             TimeoutArgument = TimeOut;
             ValueArgument = new OutArgument<string>();
             ContineOnErrorArgument = ContinueOnError;
 
-
-            if (Selector == null && uiElement != null)
-                SelectorArgument = uiElement.Selector.ToString();
-            else if (Selector == null && uiElement == null)
-                throw new SystemException("No Selector or uiElement parameter provided.");
-
-            Implementation = () => new Sequence
-            {
-                Activities =
-                    {
-                        new GetValue
-                        {
-                            Target = new Target
-                            {
-                                WaitForReady = new InArgument<WaitForReady>(activityContext =>
-                                    WaitForReadyArgument.Get(activityContext)),
-                                Selector = new InArgument<string>(activityContext =>
-                                    SelectorArgument.Get(activityContext)),
-                                TimeoutMS = new InArgument<int>(activityContext =>
-                                    TimeoutArgument.Get(activityContext))
-                            },
-                            ContinueOnError = new InArgument<bool>(activityContext =>
-                                ContineOnErrorArgument.Get(activityContext)),
-                            Value = new OutArgument<string>(activityContext =>
-                                ValueArgument.Get(activityContext))
-                        }
-                    }
-            };
-
+            IDictionary<string, object> output = new Dictionary<string, object>();
             input.Add(nameof(WaitForReadyArgument), waitForReady);
             input.Add(nameof(SelectorArgument), Selector);
             input.Add(nameof(TimeoutArgument), TimeOut);
             input.Add(nameof(ContineOnErrorArgument), ContinueOnError);
 
-            IDictionary<string, object> output = new Dictionary<string, object>();
+            if (Selector == null && UiElement != null)
+                SelectorArgument = UiElement.Selector.ToString();
+            else if (Selector == null && UiElement == null)
+                throw new SystemException("No Selector or uiElement parameter provided.");
+
+            Implementation = () => new Sequence
+            {
+                Activities =
+                {
+                    new GetValue
+                    {
+                        Target = new Target
+                        {
+                            WaitForReady = new InArgument<WaitForReady>(activityContext =>
+                                WaitForReadyArgument.Get(activityContext)),
+                            Selector = new InArgument<string>(activityContext =>
+                                SelectorArgument.Get(activityContext)),
+                            TimeoutMS = new InArgument<int>(activityContext =>
+                                TimeoutArgument.Get(activityContext))
+                        },
+                        ContinueOnError = new InArgument<bool>(activityContext =>
+                            ContineOnErrorArgument.Get(activityContext)),
+                        Value = new OutArgument<string>(activityContext =>
+                            ValueArgument.Get(activityContext))
+                    }
+                }
+            };
+
+
             try
             {
+                Console.WriteLine("");
+                Console.WriteLine("Starting Get Text activity");
                 output = WorkflowInvoker.Invoke(this, input);
+                Console.WriteLine("");
+                Console.WriteLine("Finished Get Text activity.");
             }
             catch (Exception e)
             {
