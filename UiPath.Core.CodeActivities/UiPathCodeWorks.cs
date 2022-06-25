@@ -128,7 +128,6 @@ namespace Inscriber
             DelayBeforeArgument = DelayBefore;
             ClickTypeArgument = ClickType;
             MouseButtonArgument = MouseButton;
-            UiElementArgument = UiElement;
             SelectorArgument = Selector;
             TimeoutMSArgument = TimeOutMS;
             WaitForReadyArgument = WaitForReady;
