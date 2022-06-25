@@ -18,7 +18,7 @@ Simply create the object which has the prefix **Job_<your activity name>** with 
 
 A lot of classes created in this framework have already defined values for them, consider them "default" values, some of them are initialized and may be counterproductive for your workflow such as the WaitForReady value which in this framework is always set by default to NONE, always make sure your properties are properly controlled in order to have the best experience.
             
-For now, the issue of adding anchors to selectors is not resolved, unless you somehow generate a dynamic selector using strings (which is much easier to do that in Studio).
+The issue of adding anchors to selectors is not resolved, unless you somehow generate a dynamic selector using strings (which is much easier to do that in Studio), if you want to add anchors, you will need to copy the finished selector from UiPath Studio for now.
 
 # How to contribute
 
