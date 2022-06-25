@@ -17,6 +17,8 @@ var getValue = new Job_GetValue().Run
 Simply create the object which has the prefix **Job_<your activity name>** with the **Run** method and voila, your activity will run immediately.
 
 A lot of classes created in this framework have already defined values for them, consider them "default" values, some of them are initialized and may be counterproductive for your workflow such as the WaitForReady value which in this framework is always set by default to NONE, always make sure your properties are properly controlled in order to have the best experience.
+            
+For now, the issue of adding anchors to selectors is not resolved, unless you somehow generate a dynamic selector using strings (which is much easier to do that in Studio).
 
 # How to contribute
 
