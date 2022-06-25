@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow1 xmlns="clr-namespace:UiPath.Core.CodeActivities;assembly=UiPath.Core.CodeActivities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p:TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </p:TextExpression.NamespacesForImplementation>
+  <p:TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="p:AssemblyReference">
+      <p:AssemblyReference>mscorlib</p:AssemblyReference>
+      <p:AssemblyReference>System</p:AssemblyReference>
+      <p:AssemblyReference>System.Core</p:AssemblyReference>
+      <p:AssemblyReference>System.Data</p:AssemblyReference>
+      <p:AssemblyReference>System.ServiceModel</p:AssemblyReference>
+      <p:AssemblyReference>System.Xml</p:AssemblyReference>
+    </sco:Collection>
+  </p:TextExpression.ReferencesForImplementation>
+</Workflow1>

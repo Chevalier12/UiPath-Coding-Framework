@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UiPath.OCR.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:UiPath.OCR.Contracts.Activities.IOCRActivity">
+            <summary>
+            Defines an OCR Engine that detects characters from an image.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Activities.IOCRActivity.Image">
+            <summary>
+            Image to be processed.
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.IOCRActivity.PerformOCRAsync(System.Drawing.Image,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)">
+            <summary>
+            Processes an image and returns the extracted text information.
+            </summary>
+            <param name="image">The image to be processed.</param>
+            <param name="options">A dictionary of activity arguments having as key the argument name and as value the argument value.</param>
+            <returns>Returns the result of the image processing.</returns>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Activities.OCRAsyncCodeActivity.Image">
+            <summary>
+            Image to be processed.
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRAsyncCodeActivity.PerformOCRAsync(System.Drawing.Image,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)">
+            <summary>
+            Processes an image and returns the extracted text information.
+            </summary>
+            <param name="image">The image to be processed.</param>
+            <param name="options">A dictionary of activity arguments having as key the argument name and as value the argument value.</param>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRAsyncCodeActivity.BeforeExecute(System.Activities.AsyncCodeActivityContext,System.AsyncCallback,System.Object)">
+            <summary>
+            Override this method to compute and provide all the activity input arguments, except for the Image argument.
+            The parameters are null when the engine is called at design time therefore no context is available.
+            <returns>Activity input arguments, as a dictionary, where the key is the argument name and the value is the argument value.</returns>
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRAsyncCodeActivity.OnSuccess(System.Activities.AsyncCodeActivityContext,UiPath.OCR.Contracts.DataContracts.OCRResult)">
+            <summary>
+            This method is called after computing the ocr result.
+            Can be used to set output arguments or any other final operations.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Activities.OCRCodeActivity.Image">
+            <summary>
+            Image to be processed.
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRCodeActivity.PerformOCRAsync(System.Drawing.Image,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)">
+            <summary>
+            Processes an image and returns the extracted text information.
+            </summary>
+            <param name="image">The image to be processed.</param>
+            <param name="options">A dictionary of activity arguments having as key the argument name and as value the argument value.</param>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRCodeActivity.BeforeExecute(System.Activities.CodeActivityContext)">
+            <summary>
+            Override this method to compute and provide all the activity input arguments, except for the Image argument.
+            The parameters are null when the engine is called at design time therefore no context is available.
+            <returns>Activity input arguments, as a dictionary, where the key is the argument name and the value is the argument value.</returns>
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRCodeActivity.OnSuccess(System.Activities.CodeActivityContext,UiPath.OCR.Contracts.DataContracts.OCRResult)">
+            <summary>
+            This method is called after computing the ocr result.
+            Can be used to set output arguments or any other final operations.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Activities.OCRNativeActivity.Image">
+            <summary>
+            Image to be processed.
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRNativeActivity.PerformOCRAsync(System.Drawing.Image,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)">
+            <summary>
+            Processes an image and returns the extracted text information.
+            </summary>
+            <param name="image">The image to be processed.</param>
+            <param name="options">A dictionary of activity arguments having as key the argument name and as value the argument value.</param>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRNativeActivity.BeforeExecute(System.Activities.NativeActivityContext)">
+            <summary>
+            Override this method to compute and provide all the activity input arguments, except for the Image argument.
+            The parameters are null when the engine is called at design time therefore no context is available.
+            <returns>Activity input arguments, as a dictionary, where the key is the argument name and the value is the argument value.</returns>
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Activities.OCRNativeActivity.OnSuccess(System.Activities.NativeActivityContext,UiPath.OCR.Contracts.DataContracts.OCRResult)">
+            <summary>
+            This method is called after computing the ocr result.
+            Can be used to set output arguments or any other final operations.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.DataContracts.Character.PolygonPoints">
+            <summary>
+            Four points, first being the top left corner of the word and the rest are in a clockwise order: top-left, top-right, bottom-right, bottom-left.
+            Required.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.DataContracts.Word.PolygonPoints">
+            <summary>
+            Four points, first being the top left corner of the word and the rest are in a clockwise order: top-left, top-right, bottom-right, bottom-left.
+            Required.
+            </summary>
+        </member>
+        <member name="T:UiPath.OCR.Contracts.IOCREngineActivity">
+            <summary>
+            Specifies the OCR Engine that detects characters from an image.
+            </summary>
+        </member>
+        <member name="T:UiPath.OCR.Contracts.Scrape.OCRScrapeBase">
+            <summary>
+            Defines the behaviour of an <see cref="T:UiPath.OCR.Contracts.Activities.IOCRActivity"/> in a screen scraping operation.
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Scrape.OCRScrapeBase.GetScrapeControl">
+            <summary>
+            Gets the control that is shown on the screen.
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Scrape.OCRScrapeBase.GetScrapeArguments">
+            <summary>
+            Collect all the <see cref="T:UiPath.OCR.Contracts.Activities.IOCRActivity"/> arguments from the scrape control.
+            These arguments will be used to run the <see cref="T:UiPath.OCR.Contracts.Activities.IOCRActivity"/> PerformOCR method and to
+            fill the activity arguments when the activity is created to be used in a workflow.
+            </summary>
+        </member>
+        <member name="T:UiPath.OCR.Contracts.Scrape.OCRScrapeFactory">
+            <summary>
+            A factory that creates instances of <see cref="T:UiPath.OCR.Contracts.Scrape.OCRScrapeBase"/> based on the desired usage.
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Scrape.OCRScrapeFactory.CreateEngine(UiPath.OCR.Contracts.Scrape.ScrapeEngineUsages)">
+            <summary>
+            Creates an instance of a <see cref="T:UiPath.OCR.Contracts.Scrape.OCRScrapeBase"/>.
+            </summary>
+        </member>
+        <member name="T:UiPath.OCR.Contracts.Scrape.ScrapeControlBase">
+            <summary>
+            The user control that will be shown to the user when the owning <see cref="T:UiPath.OCR.Contracts.Scrape.OCRScrapeBase"/> is selected for scraping.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Scrape.ScrapeControlBase.OcrLanguage">
+            <summary>
+            Gets or sets the desired language used for OCRing. Optional.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Scrape.ScrapeControlBase.Scale">
+            <summary>
+            Gets or sets the scale at which the input image should be resized for better results. Optional.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Scrape.ScrapeControlBase.ExtractWordsInfo">
+            <summary>
+            Gets or sets if the words should be extracted.
+            </summary>
+        </member>
+        <member name="P:UiPath.OCR.Contracts.Scrape.ScrapeControlBase.Usage">
+            <summary>
+            Gets or sets the supported scrape engine usages.
+            </summary>
+        </member>
+        <member name="T:UiPath.OCR.Contracts.Scrape.ScrapeEngineUsages">
+            <summary>
+            Types of scrape usages.
+            </summary>
+        </member>
+        <member name="T:UiPath.OCR.Contracts.Samples.SampleScrapeControl">
+            <summary>
+            Interaction logic for UserControl1.xaml
+            </summary>
+        </member>
+        <member name="M:UiPath.OCR.Contracts.Samples.SampleScrapeControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>
