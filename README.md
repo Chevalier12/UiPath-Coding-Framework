@@ -124,13 +124,13 @@ The **Get Text** activity of UiPath.Core.Activities has the following properties
 
 A few of these properties you can see below in code:
 
-        ```C#
-        public InArgument<string> SelectorArgument { get; set; }
-        public OutArgument<string> ValueArgument { get; set; }
-        public InArgument<WaitForReady> WaitForReadyArgument { get; set; }
-        public InArgument<int> TimeoutArgument { get; set; }
-        public InArgument<bool> ContineOnErrorArgument { get; set; }
-        ```
+```C#
+public InArgument<string> SelectorArgument { get; set; }
+public OutArgument<string> ValueArgument { get; set; }
+public InArgument<WaitForReady> WaitForReadyArgument { get; set; }
+public InArgument<int> TimeoutArgument { get; set; }
+public InArgument<bool> ContineOnErrorArgument { get; set; }
+```
         
 To properly contribute to this project you have to create each of the activities found in UiPath.Core.Activities by using the template provided in the snippet above by writing the class inside of the **UiPathCodeWorks.cs** file
 
