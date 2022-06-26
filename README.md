@@ -149,6 +149,7 @@ To properly contribute to this project you have to create each of the activities
 ```
 public class Job_<UiPathClassName>
 {
+            <Initialize input of IDictionary<string,object>
             <Argument Properties>
             
             <Run Method of IDictionary<string,object> type with parameters named after the UiPath Activity Properties>
