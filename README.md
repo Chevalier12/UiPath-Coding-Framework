@@ -167,6 +167,8 @@ public class Job_<UiPathClassName>
 
 }
 ```
+                        
+Also check the previous implementations of other activities.
    
 
 # What are the advantages of using the coding framework over UiPath Studio traditional method?
