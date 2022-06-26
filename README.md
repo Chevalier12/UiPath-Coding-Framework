@@ -149,14 +149,14 @@ To properly contribute to this project you have to create each of the activities
 ```
 public class Job_<UiPathClassName>
 {
-            <Initialize input of IDictionary<string,object>
+            <Initialize input Dictionary of type IDictionary<string,object>
             <Argument Properties>
             
             <Run Method of IDictionary<string,object> type with parameters named after the UiPath Activity Properties>
                         
             <Assigning values to InArguments based on parameters>
                        
-            <Initializing the output dictionary>
+            <Initializing output dictionary of type IDictionary<string,object>
             <Adding the Arguments to the input dictionary>
                         
             <Activity Implementation Body>
