@@ -15,10 +15,10 @@ namespace Inscriber
         public OutArgument<string> ValueArgument { get; set; }
         public InArgument<WaitForReady> WaitForReadyArgument { get; set; }
         public InArgument<int> TimeoutArgument { get; set; }
-        public InArgument<bool> ContineOnErrorArgument { get; set; }
+        public InArgument<bool> ContinueOnErrorArgument { get; set; }
 
         public IDictionary<string, object> Run(
-            WaitForReady waitForReady = WaitForReady.NONE,
+            WaitForReady WaitForReady = WaitForReady.NONE,
             string Selector = null,
             UiElement UiElement = null,
             int TimeOut = 30,
@@ -27,17 +27,17 @@ namespace Inscriber
         {
 
             //Assigning values and initializing dictionary
-            WaitForReadyArgument = waitForReady;
+            WaitForReadyArgument = WaitForReady;
             SelectorArgument = Selector;
             TimeoutArgument = TimeOut;
             ValueArgument = new OutArgument<string>();
-            ContineOnErrorArgument = ContinueOnError;
+            ContinueOnErrorArgument = ContinueOnError;
 
             IDictionary<string, object> output = new Dictionary<string, object>();
-            input.Add(nameof(WaitForReadyArgument), waitForReady);
+            input.Add(nameof(WaitForReadyArgument), WaitForReady);
             input.Add(nameof(SelectorArgument), Selector);
             input.Add(nameof(TimeoutArgument), TimeOut);
-            input.Add(nameof(ContineOnErrorArgument), ContinueOnError);
+            input.Add(nameof(ContinueOnErrorArgument), ContinueOnError);
 
             if (Selector == null && UiElement != null)
                 SelectorArgument = UiElement.Selector.ToString();
@@ -60,7 +60,7 @@ namespace Inscriber
                                 TimeoutArgument.Get(activityContext))
                         },
                         ContinueOnError = new InArgument<bool>(activityContext =>
-                            ContineOnErrorArgument.Get(activityContext)),
+                            ContinueOnErrorArgument.Get(activityContext)),
                         Value = new OutArgument<string>(activityContext =>
                             ValueArgument.Get(activityContext))
                     }
@@ -177,7 +177,6 @@ namespace Inscriber
                         KeyModifiers = new InArgument<KeyModifiers>((activityContext)=> KeyModifiersArgument.Get(activityContext)),
                         SendWindowMessages = new InArgument<bool>((activityContext)=> SendWindowMessagesArgument.Get(activityContext)),
                         SimulateClick = new InArgument<bool>((activityContext)=> SimulateClickArgument.Get(activityContext))
-
 
                     }
                 }

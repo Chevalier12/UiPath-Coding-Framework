@@ -1,0 +1,3 @@
+obj\x86\Debug\_UiPath.Core.CodeActivities.g.cs
+obj\x86\Debug\Activity1.g.cs
+obj\x86\Debug\UiPath.Core.CodeActivities_Activity1_BeforeInitializeComponentHelper.cs

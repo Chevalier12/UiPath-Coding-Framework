@@ -1,0 +1,2 @@
+obj\x86\Debug\Activity1.g.xaml
+obj\x86\Debug\UiPath.Core.CodeActivities_Activity1_BeforeInitializeComponentHelper.txt
