@@ -147,7 +147,7 @@ To properly contribute to this project you have to create each of the activities
             
 # Class Template
 ```
-public class <ClassName>
+public class Job_<UiPathClassName>
 {
             <Argument Properties>
             
