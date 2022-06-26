@@ -106,29 +106,7 @@ Each one of the classes in UiPath.Core.Activities have properties that need to b
         }
     }
 ```
-            
-# The template for contributing
-```
-public class <ClassName>
-{
-            <Argument Properties>
-            
-            <Run Method of IDictionary<string,object> type with parameters named after the UiPath Activity Properties>
-                        
-            <Assigning values to InArguments based on parameters>
-                       
-            <Initializing the output dictionary>
-            <Adding the Arguments to the input dictionary>
-                        
-            <Activity Implementation Body>
-                        
-            <Try Catch Snippet Copy/Paste with changed Text to reflect the activity name>    
-
-            <Return output dictionary>
-
-}
-```
-            
+                     
 
 The **Get Text** activity of UiPath.Core.Activities has the following properties:
 
@@ -165,7 +143,30 @@ public InArgument<int> TimeoutArgument { get; set; }
 public InArgument<bool> ContineOnErrorArgument { get; set; }
 ```
         
-To properly contribute to this project you have to create each of the activities found in UiPath.Core.Activities by using the template provided in the snippet above by writing the class inside of the **UiPathCodeWorks.cs** file
+To properly contribute to this project you have to create each of the activities found in UiPath.Core.Activities by using the template provided in the snippet below and by writing the class inside of the **UiPathCodeWorks.cs** file
+            
+# Class Template
+```
+public class <ClassName>
+{
+            <Argument Properties>
+            
+            <Run Method of IDictionary<string,object> type with parameters named after the UiPath Activity Properties>
+                        
+            <Assigning values to InArguments based on parameters>
+                       
+            <Initializing the output dictionary>
+            <Adding the Arguments to the input dictionary>
+                        
+            <Activity Implementation Body>
+                        
+            <Try Catch Snippet Copy/Paste with changed Text to reflect the activity name>    
+
+            <Return output dictionary>
+
+}
+```
+   
 
 # What are the advantages of using the coding framework over UiPath Studio traditional method?
 
