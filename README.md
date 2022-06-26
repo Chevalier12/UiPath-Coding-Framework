@@ -106,6 +106,29 @@ Each one of the classes in UiPath.Core.Activities have properties that need to b
         }
     }
 ```
+            
+# The template for contributing
+```
+public class <ClassName>
+{
+            <Argument Properties>
+            
+            <Run Method of IDictionary<string,object> type with parameters named after the UiPath Activity Properties>
+                        
+            <Assigning values to InArguments based on parameters>
+                       
+            <Initializing the output dictionary>
+            <Adding the Arguments to the input dictionary>
+                        
+            <Activity Implementation Body>
+                        
+            <Try Catch Snippet Copy/Paste with changed Text to reflect the activity name>    
+
+            <Return output dictionary>
+
+}
+```
+            
 
 The **Get Text** activity of UiPath.Core.Activities has the following properties:
 
